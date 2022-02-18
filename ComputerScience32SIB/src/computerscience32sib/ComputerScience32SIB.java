@@ -12,12 +12,12 @@ package computerscience32sib;
 import javax.swing.JOptionPane;
 
 /** 
- * ComputerScience32SIB.java - the large in class example we continue to work 
- * on in each unit adding example code on the new concepts of each unit along 
- * with any requests for code examples that might come up over the course.
+ * ComputerScience30S.java - the large in class example we continue to work on
+ * in each unit adding example code on the new concepts of each unit along with
+ * any in class requests for code example that might come up over the course.
  *
  * @author Mr. Wachs 
- * @since Feb. 9, 2022, 8:01:03 a.m. 
+ * @since Feb. 9, 2022, 8:01:03 a.m.
 */
 public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 
@@ -302,20 +302,19 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
         // They also start with the keyword "final" (in C# it was "const")
         
-        final double  PI           = 3.141592658389 ;
-        final int     PROBLEMS     = 99             ;
-        final char    YES          = 'Y'            ;
-        final boolean FOUND        = true           ;
-        final String  TEACHER_NAME = "Wachs"        ;
+        final double  PI           = 3.141592658389;
+        final int     PROBLEMS     = 99;
+        final char    YES          = 'Y';
+        final boolean FOUND        = true;
+        final String  TEACHER_NAME = "Wachs";
         
         System.out.println(PI       + ", " + 
                            PROBLEMS + ", " +
                            YES      + ", " +
                            FOUND    + ", " +
-                           TEACHER_NAME 
-        );
+                           TEACHER_NAME);
         
-        // Converting one data type to another
+        // Converting one data type to another 
         
         int f = 25;
         
@@ -325,7 +324,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
         System.out.println("g = " + g);
         
-        g = 25.999999999;
+        g = 25.99999999999;
         
         System.out.println("g = " + g);
         
@@ -336,6 +335,8 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // data type - which meant it ignored the decimal part
         
         System.out.println("h = " + h);
+        
+        // Casting again...
         
         double k = 2.999999999;
         int    l = (int)k;
@@ -360,18 +361,20 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // at the front of the line that makes the input dialog (code above is
         // wrong, always make a string variable then the input dialog)
         
-        String q = JOptionPane.showInputDialog("Enter");
+        String q = JOptionPane.showInputDialog("Enter string (text)");
         
         // The variable stores what they typed in the input dialog box
+        // we test this by diplaying it right away
         
         JOptionPane.showMessageDialog(null, q);
         
-        // With numbers, you HAVE to start off with a string, and then convert
-        // it to a number. This is like: Convert.ToInt32(text); in C#
+        // With numbers (integers or doubles), you HAVE to start off with a 
+        // string, and then convert it to a number. This is like:
+        // Convert.ToInt32(text).... this was in C#
         
         String r = JOptionPane.showInputDialog("Enter int");
         
-        // We use code to "parse" (means "reading")
+        // We use code to "parse" the string (means "reading")
         
         int s = Integer.parseInt(r);
         
@@ -383,7 +386,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         double u = Double.parseDouble(t);
         JOptionPane.showMessageDialog(null, u);
         
-        // Example with a char
+        // Example with a char (character)
         
         String v = JOptionPane.showInputDialog("Enter char");
         char   w = v.charAt(0);
@@ -396,26 +399,34 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // Strings have MANY built-in "actions" (function, methods)
         
         String word = "hippopotomonsprosesquippedaiophobia";
+        
         int length = word.length();
         
         System.out.println("Word " + word + " is length " + length);
+                
+        // The "String" data type (uses a capital "S") is more 'powerful'
+        // (means built-in functions) than the int, double, boolean or char
         
         String upper = word.toUpperCase();
         
-        System.out.println("Word " + word + " in uppercase is " + upper);
+        System.out.println("Word " + word + " in upper case is " + upper);
+                
+        // Many more string functions to be explored
+                
+        // Most words in code (in Java) that start with a capital letter, all
+        // have built-in 'powers' (methods) that you can explore using NetBeans
+        // autocomplete and reading what pops up
         
-        // Many more string functions can be explored
-        
-        // "Math" library of code is also "built-in" to java
-        // which comes with it's own functions (actions, methods)
+        // "Math" library of code comes with built-in functions (actions,
+        // powers, methods)
         
         double answer1 = Math.PI;
         double answer2 = Math.cos(0.5);
         double answer3 = Math.abs(-1);
-        double answer4 = Math.pow(5, 3);
+        double answer4 = Math.pow(5,3);
         double answer5 = Math.sqrt(9);
         double answer6 = Math.log(0.5);
-        
+                        
         System.out.println("answer1 = " + answer1);
         System.out.println("answer2 = " + answer2);
         System.out.println("answer3 = " + answer3);
@@ -430,7 +441,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
         System.out.println("seed = " + seed);
         
-        // You can use a formula for generatiing random numbers in a range
+        // You can use a formula for generating random numbers in a range
         // between a low and a high number
         
         // e.g. between 1 and 10 and make it an integer
@@ -440,7 +451,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         final double LOW  = 1.0;
         final double HIGH = 10.0;
         
-        // Now the formula to generate in that range
+        // Now the formula to generate a random number in the range
         
         double number = (HIGH - LOW + 1) * seed + LOW;
         
@@ -448,7 +459,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
         int value = (int)number;
         
-        // And display it
+        // and diplay it
         
         System.out.println("value = " + value);
         
@@ -456,10 +467,11 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
         int card = (int)( (53 - 2 + 1) * Math.random() + 2);
         System.out.println("card = " + card);
-
+        
         ///////////////////////////////////////////////////////////////////////
-        // (5) CONDITIONAL STATEMENTS
+        // CONDITIONAL STATEMENTS
         ///////////////////////////////////////////////////////////////////////
+        
         
         // The simple if statement, you use this when comparing if something is
         // true, as it checks that one thing ("asks a true/false question")
@@ -480,10 +492,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         double value3 = 1.45, value4 = 1.5;
         
         if (value3 < value4) {
-            System.out.println("Less than");
+            System.out.println("less than");
         }
         else {
-            System.out.println("Greater than");
+            System.out.println("greater than");
         }
         
         // Use chars and some shorthand, not usually recommended (except in 
@@ -492,19 +504,19 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // And.. (even further shorthand) the line can be moved up to the
         // same line as the if statement
         
-        char value5 = 'A', value6 = 'a';        
+        char value5 = 'A', value6 = 'a';
         if (value5 != value6) System.out.println("!=");
         else                  System.out.println("==");
-        
+                
         // Use "else if" for multiple cases of more than 2 things (same as the
         // "switch" statement - which I don't use) use strings for this
         // example which are more complex (because they use many character,
         // and upper and lower case)
         
-        // NOTE: with string NEVER use == ALWAYS use .equals()...
-        
         String word1 = "edgy";
-        String word2 = "edGy";
+        String word2 = "eDgy";
+        
+        // NOTE: with strings NEVER use "==" ALWAYS use ".equals()"
         
         if (word1.equals(word2)) {
             System.out.println("W1==W2");
@@ -516,28 +528,32 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
             System.out.println("W1!=W2");
         }
         
-        // Combine logic using "and" "or" "not" which use the symbols:
-        // "&&" for "and"
-        // "||" for "or"
-        // "!"  for "not"
+        // Combining logic using "and" "or" "not"
+        // "And" - means BOTH have to be true
+        // "Or" - means EITHER can be true
+        // "Not" - reverses logic
+        // In Java it uses symbols for these:
+        // "AND" - "&&" (ampersand Shift 7)
+        // "OR"  - "||" (pipe shift key above enter)
+        // "NOT" - "!" (like not equal)
         
         int age = 17;
         double iq = 1.0;
-
+        
         if (age >= 21 && iq > 90) {
             // with "and" BOTH have to be true
             System.out.println("Get in");
-        } 
+        }
         else if (age >= 18 || iq > 0) {
             // with "or" EITHER can be true
             System.out.println("Keep trying");
-        } 
+        }
         else {
             System.out.println("Get out");
         }
         
         ///////////////////////////////////////////////////////////////////////
-        // (6) LOOPING
+        // LOOPING
         ///////////////////////////////////////////////////////////////////////
         
         // Simple loop...
@@ -546,7 +562,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
         while (counter < 10) {
             System.out.println("counter = " + counter);
-            counter++;  // counter = counter + 1
+            counter++;  // counter = counter + 1;
         }
         
         // while loop with a string
@@ -569,7 +585,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
             choice = JOptionPane.showInputDialog("Enter password");
         } while (choice.equalsIgnoreCase(password) == false);
         
-        JOptionPane.showMessageDialog(null, "You got it");
+        JOptionPane.showMessageDialog(null, "You got it!");
         
         // The "for" loop is used for counting (and for the upcoming unit 
         // called "arrays"). It is a much more technical ("codey") looking loop
@@ -582,17 +598,17 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         }
         
         // Variations on the for loop:
-            // start at 100
-            // end (stop) at zero (including zero)
-            // count down (not up)
-            // count by 10s
+            // START - at 100
+            // END (stops) - at zero (including zero)
+            // CHANGE - count down (not up)
+            //          count by 10s
         
         for (int i = 100; i >= 0; i = i - 10) {
             System.out.println("i = " + i);
         }
         
         ///////////////////////////////////////////////////////////////////////
-        // (7) EXAMPLE ASSIGNMENT:
+        // EXAMPLE ASSIGNMENT:
         ///////////////////////////////////////////////////////////////////////
         
         // Create welcome screen for the user (message dialog box)
@@ -625,6 +641,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
         // Curly brackets (braces, parenthesis) { and } are important - all 
         // code goes between these two brackets
+        
     }
 
 }
@@ -647,3 +664,30 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 //      error and a potential fix (if you click on the lightbulb)
 // (11) You can get more NetBeans tips and autocompletes by selecting:
 //      Help -> Keyboard Shortcuts Card
+// (12) Go to Tools -> Templates, scroll down and click on the "+" beside 
+//      "Java", select "Java Main Class", and "Open in Editor" and the enter 
+//      this into the temple (but use the slash "/" instead of "|"):
+//
+//      /** 
+//       * ${name}.java - 
+//       *
+//       * @author Mr. Wachs 
+//       * @since ${date} 
+//       */
+//      public class ${name} 
+//       { .... etc .....     
+//
+// (13) To autoformat code (fixes indents, extra spaces, etc.) you select the
+//      code with mouse or keyboard (if you select nothing it will autoformat
+//      all the code) and pres ALT + SHIFT + F (you should do this before you 
+//      hand in your code)
+// (14) When printing code for hand in (this only needs to be done once), click
+//      on "Print Options" and uncheck everything previously checked off, and
+//      then check off "Print as in Editor", then either print it to a PDF 
+//      (which means select "Microsoft Print to PDF" on the next screen), or
+//      cancel and resize the code to fit better (see tip #1) and then print 
+//      again
+// (15) You can "teach" NetBeans to change the style it uses to autoformat (see
+//      number 13) by going to Tools -> Options, then click on the "Editor"
+//      tab at the top, then the "Formatting" below that. Then change the 
+//      settings to what you prefer
