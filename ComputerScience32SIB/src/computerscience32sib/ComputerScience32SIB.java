@@ -12,7 +12,7 @@ package computerscience32sib;
 import javax.swing.JOptionPane;
 
 /** 
- * ComputerScience30S.java - the large in class example we continue to work on
+ * ComputerScience32SIB.java - the large in class example we continue to work on
  * in each unit adding example code on the new concepts of each unit along with
  * any in class requests for code example that might come up over the course.
  *
@@ -27,11 +27,14 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        learnIntroToJava();     
+        learnIntroToJava();     
         // We are "calling" the method (means "running" it or "executing" it)
         learnMethods();
     }
 
+    /**
+     * Learn the content of the introduction unit
+     */
     private static void learnIntroToJava() {
         // TODO code application logic here
         
@@ -650,20 +653,152 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         
     }
 
+    /**
+     * Learn the content of the methods unit
+     */
     private static void learnMethods() {
-        System.out.println("Start learning about methods...");
+        System.out.println("Start learning methods...");
         
+        // Methods (functions, procedures, actions) are named in a style like 
+        // variables are named (lowercase then camel casing), but use verb
+        // type words starting with lowercase then using camel casing the
+        // presense of round brackets ( ) indicate a method. We make methods
+        // for: (1) to break up a problem (2) reusability (3) to avoid 
+        // repeating code
         
+        // Code to "jump" to a method, is "calling" the method (method call)
+        writeStar();
         
-        System.out.println("Completed learning methods!");
+        // Call it again
+        writeStar();
+        
+        // When we call a method, we place "data" (information) inside the
+        // round brackets and that data is "passed" (sending) over to the 
+        // method. The data being passed is tecehnically called the "argument"
+        // and the data being recieved is called the "parameter(s)". You can
+        // always change the arguement.
+                
+        write("Dogalicious");
+        
+        write("mumble");
+        write("Spider-man");
+        write("Banana bread");
+        
+        // You can have more than one, multiple parameters/arguments in a 
+        // method which are seperated with commas ","
+        
+        writeLotsOf("Dalmations",101);
+        
+        writeLotsOf("Problems", 99);
+        
+        // You can make methods that "send back" (output) information, the 
+        // previous methods needed information (inputs) as parameters or 
+        // empty brackets () if they did not need information passed
+        
+        int number = giveMeNumber();
+        
+        write("Number is " + number);
+        
+        // Overloaded methods are methods with the smae name, BUT different
+        // parameters / arguments
+        
+        output("Hello");
+        
+        output("Good-bye","Learning Methods");        
+        
+        System.out.println("Learning methods complete!");
     }
-    
-    
+
+    /**
+     * Writes a star on the screen
+     */
+    private static void writeStar() {
+        System.out.println("*");
+    }
+
+    /**
+     * Writes something on the screen
+     * 
+     * @param thing the something to write
+     */
+    private static void write(String thing) {
+        // Information (data) "passed" to this method is called the parameter,
+        // if you use the lightbulb to write this method, you should (do this 
+        // first) rewrite the name of that parameter
+        System.out.println(thing);
+    }
+
+    /**
+     * Writes something on the screen multiple times
+     * 
+     * @param thing the something to write
+     * @param times how many times to write ut
+     */
+    private static void writeLotsOf(String thing, int times) {
+        // Methods can have no parameters, one parameter, or lots of parameters,
+        // if it has more than one parameter, they are separated by commas
+        for (int i = 0; i < times; i++) {
+            write(thing);
+        }
+    }
+
+    /**
+     * Gives you a random number
+     * 
+     * @return random number between 1 and 10
+     */
+    private static int giveMeNumber() {
+        // Methods can have no outputs (the word "void") or can have ONE output
+        // which means the method will "return" that data type in the method
+        return random(1, 100);
+    }
+
+    /**
+     * Generates a random number in a range between two numbers
+     * 
+     * @param low the lowest number in the range
+     * @param high the highest number in the range
+     * @return random number less than or equal to low and greater than or 
+     * equal to high
+     */
+    private static int random(int low, int high) {
+        double seed   = Math.random();
+        double L      = (double)low;
+        double H      = (double)high;
+        double number = (H - L + 1) * seed + L;
+        return (int)number;
+    }
+
+    /**
+     * Display text in a dialog
+     * 
+     * @param text the text to display
+     */
+    private static void output(String text) {
+        JOptionPane.showMessageDialog(null, text);
+    }
+
+    /**
+     * Display text in a dialog with a title at the top of the dialog
+     * 
+     * @param text the text to display
+     * @param title what to show at the top of the dialog
+     */
+    private static void output(String text, String title) {
+        // Overloaded methods are methods with the same name, BUT different
+        // parameters / arguments so we know which version of the method to call
+        JOptionPane.showMessageDialog(null, text, title, 
+                JOptionPane.PLAIN_MESSAGE);
+    }
     
 }
 
+// <editor-fold>  
+
 // NETBEANS TIPS:
 // ==============
+// GENERAL TIPS....
+// ================
 // (1)  To zoom in and out on the code, hold ALT and roll the mouse
 // (2)  Double click the top of a tab to hide side windows or show them
 // (3)  The curly brackets (braces, parenthesis) are important "{" and "}"
@@ -707,6 +842,8 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 //      number 13) by going to Tools -> Options, then click on the "Editor"
 //      tab at the top, then the "Formatting" below that. Then change the 
 //      settings to what you prefer
+// METHOD TIPS....
+// ================
 // (16) The + and - signs and gray lines along the side in NetBeans
 //      help to "expand" and "collapse" the method body (block of code)
 //      press CTRL and SHIFT and "-" it collapses all methods, and
@@ -720,3 +857,11 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 // (20) If you have to rename a variable or a method, select the word (the name
 //      of the variable or method) and then press CTRL + R, then type in a
 //      new name
+// (21) If you type /** before the method signature line it will automate
+//      which JavaDoc comments you should make
+// (22) If you want to remove the auto-generated reminder when you use the
+//      lightbulb to create a method, go to Tools -> Templates, scroll down 
+//      and click on the "+" beside "Java", and then the "+" beside "code
+//      snippets", and select "Generated Method body" and remove the last line
+
+// </editor-fold>
