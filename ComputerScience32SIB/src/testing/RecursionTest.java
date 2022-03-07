@@ -23,6 +23,23 @@ package testing;
 public class RecursionTest 
 {
     
-    //     
+    /**
+     * Constructor method (when a constructor method has no parameters - it is
+     * called the "default" constructor)
+     */
+    public RecursionTest() {
+        System.out.println("Recursion test started...");
+        
+        // Testing is something that can be studied in more detail and is more
+        // advanced as you study more Computer Science or work in the industry
+        // Testing can follow a "paradigm" (or specific set of procedures)
+        // called "Unit Testing" - this can be expanded on even into specific
+        // programming languages (for example "JUnit")
+        
+        
+        
+        
+        System.out.println("Recursion test complete!");
+    }   
     
 }
