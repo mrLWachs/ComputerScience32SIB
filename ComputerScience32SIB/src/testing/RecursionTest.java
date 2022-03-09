@@ -46,13 +46,13 @@ public class RecursionTest
         System.out.println("Recursive factorial..............................");
         
         // Set up constants to set the "edges"
-        final int MIN_FACTORIAL = 1;
-        final int MAX_FACTORIAL = 5;
+        final int MIN_FACTORIAL = -1;
+        final int MAX_FACTORIAL = 20;
         
         // Travel ("traverse") through all the edge cases
         for (int i = MIN_FACTORIAL; i <= MAX_FACTORIAL; i++) {
             int number = i;
-            int answer = Calculator.factorial(number);
+            long answer = Calculator.factorial(number);
             System.out.println("Number " + number + " is factorial " + answer);
         }
         
