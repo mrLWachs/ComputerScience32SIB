@@ -60,14 +60,13 @@ public class RecursionTest
         
         // Set up constants to set the "edges"
         final int MIN_EXPONENT = -10;
-        final int MAX_EXPONENT = 20;
-        
-        final int MIN_BASE = 0;
-        final int MAX_BASE = 20;
+        final int MAX_EXPONENT = 20;        
+        final int MIN_BASE     = 0;
+        final int MAX_BASE     = 20;
         
         // Nested for loops to run through (traverse) all the test data
-        // for loop tips:
-            // (1) type "for" then tab it writes the basic for loop
+        // Some "for" loop NetBeans tips:
+            // (1) Type "for" then tab it writes the basic for loop
             // (2) The variable "i" is initially highlighted so you can change
             //     or rename it right away
             // (3) Right after renaming, if you tab a second time it highlights
