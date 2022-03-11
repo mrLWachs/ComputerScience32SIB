@@ -29,4 +29,29 @@ public class Calculator
         return number * factorial(number - 1);
     }
     
+    /**
+     * Calculates the power of a base to it's exponent
+     * 
+     * @param base the base of the power
+     * @param exponent the exponent of the power
+     * @return the base^exponent
+     */
+    public static double power(int base, int exponent) {
+        // Base case(s) - stop recursion (like a loop)
+        if (exponent == 0) return 1;
+        if (exponent == 1) return base;
+        // Recursive case(s) - method calls itself
+        if (exponent < 0) {
+            // For negative exponents
+            if (base > 0) {
+                return 1 / power(base, exponent * -1);
+            }
+            else {
+                // When base is zero, cannot divide by zero
+                return Double.MIN_VALUE;
+            }
+        }
+        return base * power(base, exponent-1);
+    }
+    
 }

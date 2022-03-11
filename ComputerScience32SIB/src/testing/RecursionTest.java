@@ -56,9 +56,31 @@ public class RecursionTest
             System.out.println("Number " + number + " is factorial " + answer);
         }
         
+        System.out.println("Recursive Powers.................................");
         
+        // Set up constants to set the "edges"
+        final int MIN_EXPONENT = -10;
+        final int MAX_EXPONENT = 20;
         
-            
+        final int MIN_BASE = 0;
+        final int MAX_BASE = 20;
+        
+        // Nested for loops to run through (traverse) all the test data
+        // for loop tips:
+            // (1) type "for" then tab it writes the basic for loop
+            // (2) The variable "i" is initially highlighted so you can change
+            //     or rename it right away
+            // (3) Right after renaming, if you tab a second time it highlights
+            //     the ending value so you can change it        
+        for (int base = MIN_BASE; base <= MAX_BASE; base++) {
+            for (int exponent = MIN_EXPONENT; exponent <= MAX_EXPONENT; exponent++) {
+                double answer = Calculator.power(base, exponent);                
+                System.out.println("Base "             + base + 
+                                   " to the exponent " + exponent + 
+                                   " = "               + answer);
+            }
+        }
+                    
         System.out.println("Recursion test complete!");
     }   
     
