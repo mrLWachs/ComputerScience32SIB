@@ -839,6 +839,22 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         //       +-------+-------+-------+-------+-------+
         //           0       1       2       3       4
         
+        numbers[0] = 25;
+        numbers[1] = 250;
+        numbers[2] = 2;
+        numbers[3] = -25;
+        numbers[4] = 0;
+
+        //       +-------+-------+-------+-------+-------+
+        // array |   25  |  250  |   2   |  -25  |   0   | (now filled)
+        //       +-------+-------+-------+-------+-------+
+        //           0       1       2       3       4
+        
+        // These next lines would be errors when the code runs:
+        // array[5] = 25;
+        // array[-1] = 25;
+        // They would be "out of bounds" errors (or "range" error)
+        
         
         
         
