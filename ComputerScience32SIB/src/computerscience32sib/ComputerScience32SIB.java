@@ -855,9 +855,25 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // array[-1] = 25;
         // They would be "out of bounds" errors (or "range" error)
         
+        // Declare an array (a little differently) of NO size...        
+        double a[];        
         
+        // In memory...
+        //
+        // a
+        //
         
+        // Later on (in the code) you can re-create (re-declare, re-dimension, 
+        // or resize) using the same array but now giving it some size (but 
+        // still empty)
+        a = new double[3];
         
+        // In memory....
+        //
+        //   +----------+----------+----------+
+        // a |          |          |          | (now has size of 3, but empty)
+        //   +----------+----------+----------+
+        //        0          1          2
         
         
         
