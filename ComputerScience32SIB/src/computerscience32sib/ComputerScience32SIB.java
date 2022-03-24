@@ -875,6 +875,26 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         //   +----------+----------+----------+
         //        0          1          2
         
+        // Now fill with content
+        a[0] = 1.1;
+        a[1] = 2.2;
+        a[2] = 3.3;
+        
+        //   +----------+----------+----------+
+        // a |   1.1    |   2.2    |   3.3    | (now it is filled with content)
+        //   +----------+----------+----------+
+        //        0          1          2
+        
+        // You can re-dimension (resize) an array multiple times, BUT
+        // every time it wipes out any content stored in the array
+        a = new double[5];
+        
+        //   +----------+----------+----------+----------+----------+
+        // a |          |          |          |          |          | (size 5)
+        //   +----------+----------+----------+----------+----------+
+        //        0          1          2          3          4
+        
+        
         
         
         
