@@ -800,6 +800,9 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
                 JOptionPane.PLAIN_MESSAGE);
     }
 
+    /**
+     * Learn the content of the arrays unit (unit 3)
+     */
     private static void learnArrays() {
         System.out.println("Start Learning Arrays...");
         
@@ -812,7 +815,6 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // variable |   5   | (type integer)
         //          +-------+
                 
-        
         // Now declare (create) an array:
         int numbers[] = new int[5];
         
@@ -820,9 +822,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // array names are usually "plural" words
         // E.g. in memory an array could "look" like...
         //
-        //       +-------+-------+-------+-------+-------+
-        // array |       |       |       |       |       | (a length of 5)
-        //       +-------+-------+-------+-------+-------+
+        //         +-------+-------+-------+-------+-------+
+        // numbers |       |       |       |       |       | (a length of 5)
+        //         +-------+-------+-------+-------+-------+
+        //
         // The square brackets "[  ]" in code indicate we are using an array, 
         // the word "new" is used because arrays (they are technically 
         // "advanced" data types) are more complicated than variables (which 
@@ -834,10 +837,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // which automatically numbers them - BUT the first spot is ALWAYS
         // numbered as spot zero and the rest and numbered in order:
         //
-        //       +-------+-------+-------+-------+-------+
-        // array |       |       |       |       |       | (indexed)
-        //       +-------+-------+-------+-------+-------+
-        //           0       1       2       3       4
+        //         +-------+-------+-------+-------+-------+
+        // numbers |       |       |       |       |       | (indexed)
+        //         +-------+-------+-------+-------+-------+
+        //             0       1       2       3       4
         
         numbers[0] = 25;
         numbers[1] = 250;
@@ -845,10 +848,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         numbers[3] = -25;
         numbers[4] = 0;
 
-        //       +-------+-------+-------+-------+-------+
-        // array |   25  |  250  |   2   |  -25  |   0   | (now filled)
-        //       +-------+-------+-------+-------+-------+
-        //           0       1       2       3       4
+        //         +-------+-------+-------+-------+-------+
+        // numbers |   25  |  250  |   2   |  -25  |   0   | (now filled)
+        //         +-------+-------+-------+-------+-------+
+        //             0       1       2       3       4
         
         // These next lines would be errors when the code runs:
         // array[5] = 25;
