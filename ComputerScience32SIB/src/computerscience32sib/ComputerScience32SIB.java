@@ -897,8 +897,60 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         //   +----------+----------+----------+----------+----------+
         //        0          1          2          3          4
         
+        // Another way to declare arrays, but this way creates the array of
+        // a set size, BUT with pre-filled values inside (make and fill at the
+        // same time - on the same ONE line of code) - you can as an option,
+        // put the "[]" beside the data type OR the array name
         
+        double[] coins = { 0.05, 0.10, 0.25, 1.00, 2.00 };
         
+        //       +------+------+------+------+------+
+        // coins | 0.05 | 0.10 | 0.25 | 1.00 | 2.00 |  (has a length of 5)
+        //       +------+------+------+------+------+
+        //          0      1      2      3      4  
+        
+        // You can also create CONSTANT arrays that are pre-filled, the name
+        // we gives array should be a plural word (e.g. 'scores' (array name)
+        // not 'score' (variable name), 'names' not 'name', etc.) 
+        final String[] OPTIONS = {
+            "New Game",
+            "Save Game",
+            "Exit"
+        };
+        
+        // When using arrays, use individual elements (spots, indices - the 
+        // plural of "index") of the array like regular variables, for example
+        
+        int[] values = new int[100];
+        
+        // Change (assign) a index (spot)
+        values[99] = 333;
+        
+        //         +-----+-----+-----+
+        // numbers |     | ... | 333 | (length is 100)
+        //         +-----+-----+-----+
+        //            0    ...   99
+        // Remember, the last index is always ONE LESS than the length
+        
+        // Output that spot
+        System.out.println(values[99]);
+        
+        // Perform equations with array indices like variables
+        values[0] = values[99] + values[99];
+        System.out.println(values[0]);
+        
+        // To work with, and to "travel" (means to "visit" every spot) the 
+        // entire array, we use a loop!
+        
+        // Specifically, the FOR loop!
+        
+        // for loops were literally built for arrays
+        for (int i = 0; i < 100; i++) {
+            System.out.println(values[i]);
+        }
+        // The for loop is perfect because it automatically (when I type "for"
+        // and TAB) starts at 0, goes up by 1, is "less than" then ending 
+        // number (which can be the length)
         
         
         
