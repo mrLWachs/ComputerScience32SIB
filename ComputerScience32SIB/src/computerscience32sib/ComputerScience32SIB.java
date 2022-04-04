@@ -32,10 +32,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 //        learnIntroToJava();     
 //        // We are "calling" the method (means "running" it or "executing" it)
 //        learnMethods();
-        learnArrays();
+//        learnArrays();
 
         // FOR CS40S content ONLY...............................................
-//        Tester tester = new Tester();
+        Tester tester = new Tester();
         // This line creates a tester object (instantiates an instance of a 
         // tester class object) and it calls the constructor method - you can
         // comment out the rest of the code in the main method
@@ -960,6 +960,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         }
         // Tip: if type "for" TAB, then TAB AGAIN it jump to the ending value
         // So if the array size changes, the loop adapts to it
+        
+        
+        
+        
         
         
         
