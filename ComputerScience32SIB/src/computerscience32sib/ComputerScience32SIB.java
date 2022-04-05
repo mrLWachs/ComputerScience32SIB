@@ -32,10 +32,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 //        learnIntroToJava();     
 //        // We are "calling" the method (means "running" it or "executing" it)
 //        learnMethods();
-//        learnArrays();
+        learnArrays();
 
         // FOR CS40S content ONLY...............................................
-        Tester tester = new Tester();
+//        Tester tester = new Tester();
         // This line creates a tester object (instantiates an instance of a 
         // tester class object) and it calls the constructor method - you can
         // comment out the rest of the code in the main method
@@ -961,14 +961,79 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         // Tip: if type "for" TAB, then TAB AGAIN it jump to the ending value
         // So if the array size changes, the loop adapts to it
         
+        // Array can easily work with methods, the arrays can be sent into a 
+        // method (as one of multiple parameters, or the only parameter), and 
+        // arrays can be outputted (returned) from a method - in other words:
+        // Arrays can be INPUT(s) or OUTPUT from a method
         
+        output(values);     // Send an array to a method as a parameter
+        output(numbers);    // Call the same method with different argument
+        output(coins);      // Overload the output method again
         
-        
-        
-        
+        int[] randoms = random(1, 10, 50);    // Overload "random" method
+        output(randoms);
         
         
         System.out.println("Completed Learning Arrays!");
+    }
+
+    /**
+     * Outputs an array of integers in a dialog
+     * 
+     * @param array the array of integers
+     */
+    private static void output(int[] array) {
+        // Arrays can be a parameter (or one of the parameters)
+        String text = "Array [";
+        // Loop (traverse) through the array and add the contents to the string
+        for (int i = 0; i < array.length; i++) {
+            text = text + array[i] + ",";
+        }
+        text = text + "]";                
+        output(text);
+    }
+
+    /**
+     * Convert all the doubles into integers and then output the array in a 
+     * dialog
+     * 
+     * @param array the array of doubles
+     */
+    private static void output(double[] array) {
+        int[] a = convert(array);   // Create int array of converted doubles        
+        output(a);                  // Now output the converted array
+    }
+
+    /**
+     * Converts an array of doubles into an array of integers
+     * 
+     * @param array the array of doubles
+     * @return an array of integers
+     */
+    private static int[] convert(double[] array) {
+        // Methods can return (output) entire arrays
+        int[] a = new int[array.length];      // Create empty array (same size)
+        for (int i = 0; i < a.length; i++) {  // Traverse the array
+            a[i] = (int)array[i];             // Cast the double into a int
+        }
+        return a;                             // Return the converted new array
+    }
+
+    /**
+     * Generates an array of a set size filled with random integers in the 
+     * range between low and high
+     * 
+     * @param low the lowest number in the range
+     * @param high the highest number in the range
+     * @param size the size to make the array
+     * @return an array of random integers
+     */
+    private static int[] random(int low, int high, int size) {
+        int[] numbers = new int[size];      // Create empty array of passed size
+        for (int i = 0; i < size; i++) {    // Traverse array 
+            numbers[i] = random(low, high); // Assign random value to each index
+        }
+        return numbers;                     // Return completed array
     }
     
 }
