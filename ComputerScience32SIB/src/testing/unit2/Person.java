@@ -15,6 +15,15 @@ package testing.unit2;
 public class Person 
 {
     
+    // Properties: (things about it, adjectives, descriptors).............
+    
+    String name;
+    int age;
+    boolean alive;
+    String gender;
+    
+    
+    // Methods: (things it can do, verbs, actions)........................ 
     
     
 }

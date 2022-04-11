@@ -2,6 +2,8 @@
 /** Required package class namespace */
 package testing;
 
+import testing.unit2.Person;
+
  
 /**
  * AdvancedClassesTest.java - tests the concepts learned in this unit
@@ -23,6 +25,12 @@ public class AdvancedClassesTest
      */
     public AdvancedClassesTest() {
         System.out.println("\nStarting Advanced Classes...\n");
+        
+        // Using the class (Person capital "P") to create an object ("person" 
+        // lowercase "p") with the default constructor:
+        // class object = call constructor method (default); 
+        Person person = new Person();
+        
         
         
         System.out.println("\nAdvanced Classes complete!\n");
