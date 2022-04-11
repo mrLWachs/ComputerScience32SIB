@@ -17,6 +17,11 @@ public class Person
     
     // Properties: (things about it, adjectives, descriptors).............
     
+    // Reminder...
+    // Properties are essentially "variables" or more specifically "global
+    // variables" for this class - they can be simple variables, or even 
+    // arrays (or even other classes)
+    
     String name;
     int age;
     boolean alive;
@@ -25,10 +30,12 @@ public class Person
     
     // Methods: (things it can do, verbs, actions)........................ 
     
-    // Method need a name, (possibly) inputs, (possibly) output
-    // structure of writing a method is: output name(inputs) { }
-    // if it has no output (use the word "void") if it has no input(s) or
+    // Reminder...
+    // Methods need a name, (possibly) input(s), and (possibly) an output
+    // The formal structure of writing a method is: output name(inputs) { }
+    // But, if it has no output (use the word "void") if it has no input(s) or
     // parameters, leave the round brackets empty "()"
+    
     
     void born() {
     
