@@ -32,10 +32,10 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 //        learnIntroToJava();     
 //        // We are "calling" the method (means "running" it or "executing" it)
 //        learnMethods();
-//        learnArrays();
+        learnArrays();
 
         // FOR CS40S content ONLY...............................................
-        Tester tester = new Tester();
+//        Tester tester = new Tester();
         // This line creates a tester object (instantiates an instance of a 
         // tester class object) and it calls the constructor method - you can
         // comment out the rest of the code in the main method
@@ -973,6 +973,63 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
         int[] randoms = random(1, 10, 50);    // Overload "random" method
         output(randoms);
         
+        // Multi-dimensional array (also known as a "array of arrays", or a 
+        // array filled with other arrays, 2D, etc.) - and also known as a 
+        // table, grid, or a MATRIX
+        
+        // Create some constants to use when building the matrix (these are
+        // not needed to declare a matrix, but they might help in understanding 
+        // it) - we make contants as a way to "visualize" what we are building
+        
+        final int ROWS    = 30; // "dimension" going "down" (also like "y" axis)
+        final int COLUMNS = 40; // "dimension" going "across" (also like "x")
+        
+        // We declare (create) a matrix , by adding multiple sets of square
+        // brackets (a set of brackets for each dimension)
+        
+        char[][] matrix = new char[ROWS][COLUMNS];
+                
+        // If we "visualize this as a 3 by 4 matrix (3 rows by 4 columns), or 
+        // y = 3 and x = 4, or a "height" of 3 and a "width" of 4, then it
+        // could be "seen" as...
+        //
+        //               (columns, width, x axis is 4, meaning 0-3)
+        //
+        //                     0         1         2         3
+        //                +---------+---------+---------+---------+
+        // (rows,       0 |         |         |         |         |
+        //  height,       +---------+---------+---------+---------+
+        //  y axis      1 |         |         |         |         |
+        //  is 3,         +---------+---------+---------+---------+
+        //  meaning     2 |         |         |         |         |
+        //  0-2)          +---------+---------+---------+---------+
+        // 
+        // A matrix "row" can also be "visualized" as the matrix "height"
+        // A matrix "column" can also be "visualized" as the matrix "width"
+        
+        // Fill the matrix with random characters...
+        // (using a method for random characters)       
+                
+        final char LOW  = 'a';
+        final char HIGH = 'z';
+        
+        // Create and test a method to make random characters
+        char character = random(LOW,HIGH);
+        System.out.println("Random character was " + character);
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+        
+        
         
         System.out.println("Completed Learning Arrays!");
     }
@@ -1034,6 +1091,17 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
             numbers[i] = random(low, high); // Assign random value to each index
         }
         return numbers;                     // Return completed array
+    }
+    
+    /**
+     * Generates a random character between tow low and high characters
+     * 
+     * @param low lowest character in the range
+     * @param high highest character in the range
+     * @return random character in range
+     */
+    private static char random(char low, char high) {
+        return (char)random((char)low,(int)high);     // cast to int and back  
     }
     
 }
