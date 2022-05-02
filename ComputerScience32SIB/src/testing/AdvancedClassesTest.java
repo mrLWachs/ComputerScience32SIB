@@ -29,8 +29,12 @@ public class AdvancedClassesTest
         // Using the class (Person capital "P") to create an object ("person" 
         // lowercase "p") with the default constructor:
         // class object = call constructor method (default); 
-        Person person = new Person();
+        Person person = new Person();                   // A person object
         
+        // Class object = new Class() <--- implies a method?
+        
+        // Now call (invoke) a method within the object
+        person.talk();                                  // Calls class method 
         
         
         

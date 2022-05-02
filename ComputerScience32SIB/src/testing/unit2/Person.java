@@ -22,10 +22,10 @@ public class Person
     // variables" for this class - they can be simple variables, or even 
     // arrays (or even other classes)
     
-    String name;
-    int age;
-    boolean alive;
-    String gender;
+    public String name;
+    public int age;
+    public boolean alive;
+    public String gender;
     
     
     // Methods: (things it can do, verbs, actions)........................ 
@@ -36,8 +36,18 @@ public class Person
     // But, if it has no output (use the word "void") if it has no input(s) or
     // parameters, leave the round brackets empty "()"
     
-    
-    void born() {
+    /**
+     * Class constructor method, sets the class properties when the class is
+     * instantiated into an object - in other words, when a person object is
+     * "built" it calls this method to build it. Constructor methods with no 
+     * parameters are called "default" constructors. Constructor methods are 
+     * special methods that have (1) the same name as the class, (2) that name
+     * starts with a capital letter, (3) it has NO return type (not even the 
+     * word "void"). These methods are called when the class is used to build 
+     * (construct, instantiate) an object. Constructor methods should always
+     * be public
+     */
+    public Person() {
         alive  = true;
         age    = 0;
         name   = "Jane Doe";
@@ -47,7 +57,7 @@ public class Person
     /**
      * The person dies 
      */
-    void die() {
+    public void die() {
         alive = false;
     }
     
@@ -55,7 +65,7 @@ public class Person
      * Method to simulate this person "talking" out information about the object
      * it outputs data on this person to the screen
      */
-    void talk() {
+    public void talk() {
         if (alive) {
             System.out.println(name + " is " + age + " identifies " + gender);
         }
@@ -67,7 +77,7 @@ public class Person
     /**
      * A person has a birthday (the age goes up by one)
      */
-    void birthday() {
+    public void birthday() {
         age++;
     }
        
