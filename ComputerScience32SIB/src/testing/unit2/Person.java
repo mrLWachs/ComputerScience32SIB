@@ -54,13 +54,25 @@ public class Person
         gender = "female";
     }
     
-    
-    public Person(String theName, int theAge, String theGender) {
+    /**
+     * Second, overloaded (methods with the same name, different parameters) 
+     * constructor method, sets class properties using the keyword "this" which
+     * refers to the the class itself so I don't have to make different names 
+     * for the parameters. 
+     * 
+     * @param name the name for this person
+     * @param age the age for this person
+     * @param gender the gender for this person 
+     */
+    public Person(String name, int age, String gender) {
         alive = true;
         
-        age = theAge;
-        name = theName;
-        gender = theGender;
+        // Assign the parameter to the property (global variable of this class)
+        // To do this, we use the keyword "this" which acts as a placeholder
+        // for the name of the object (whcih will be created at a later time)
+        this.name   = name;
+        this.age    = age;        
+        this.gender = gender;
     }
     
     
