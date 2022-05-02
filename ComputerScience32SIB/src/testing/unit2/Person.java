@@ -54,6 +54,16 @@ public class Person
         gender = "female";
     }
     
+    
+    public Person(String theName, int theAge, String theGender) {
+        alive = true;
+        
+        age = theAge;
+        name = theName;
+        gender = theGender;
+    }
+    
+    
     /**
      * The person dies 
      */

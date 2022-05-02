@@ -36,6 +36,21 @@ public class AdvancedClassesTest
         // Now call (invoke) a method within the object
         person.talk();                                  // Calls class method 
         
+        // Construct another person object (instance) using our second
+        // overloaded constructor method
+        
+        Person twitter = new Person("Elon Musk", 50, "he/him");
+        
+        // Use (call/invoke) other methods and change (modify) properties
+        twitter.talk();
+        twitter.birthday();
+        twitter.talk();
+        twitter.gender = "they";
+        twitter.talk();
+        twitter.die();
+        twitter.talk();
+        
+        
         
         
         
