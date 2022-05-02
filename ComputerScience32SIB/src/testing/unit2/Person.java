@@ -38,19 +38,37 @@ public class Person
     
     
     void born() {
-    
+        alive  = true;
+        age    = 0;
+        name   = "Jane Doe";
+        gender = "female";
     }
     
+    /**
+     * The person dies 
+     */
     void die() {
-    
+        alive = false;
     }
     
+    /**
+     * Method to simulate this person "talking" out information about the object
+     * it outputs data on this person to the screen
+     */
     void talk() {
-    
+        if (alive) {
+            System.out.println(name + " is " + age + " identifies " + gender);
+        }
+        else {
+            System.out.println("Boooo!!!");
+        }
     }
     
+    /**
+     * A person has a birthday (the age goes up by one)
+     */
     void birthday() {
-    
+        age++;
     }
        
 }
