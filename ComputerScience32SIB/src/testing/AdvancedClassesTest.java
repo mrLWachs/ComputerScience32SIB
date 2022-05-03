@@ -3,6 +3,7 @@
 package testing;
 
 import testing.unit2.Person;
+import testing.unit2.Student;
 
  
 /**
@@ -49,6 +50,28 @@ public class AdvancedClassesTest
         twitter.talk();
         twitter.die();
         twitter.talk();
+        
+        // twitter.age = 16;   // Cannot do this, property is locked (private)
+        // The property cannot be accessed (encapsulated)
+        
+        // Instantiate (create) a Student object and call it's methods 
+        // (including the ones it inherited from the Person class) 
+        Student student = new Student();
+        
+        // Call (invoke) any inherited methods, or change any inhertited 
+        // properties from the Person class
+        student.talk();
+        student.name = "Peter Parker";
+        student.gender = "he/him";
+        student.birthday();
+        student.talk();
+        
+        
+        
+        
+        
+        
+        
         
         
         

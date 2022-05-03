@@ -22,10 +22,18 @@ public class Person
     // variables" for this class - they can be simple variables, or even 
     // arrays (or even other classes)
     
-    public String name;
-    public int age;
+    public String name;    
     public boolean alive;
     public String gender;
+        
+    /**
+     * Properties that use the "modifier" word "private" will "encapsulate"
+     * this property so that it can only be accessed inside the class (like 
+     * a "private room") - this is the concept of encapsulation
+     */
+    private int age;
+    
+    
     
     
     // Methods: (things it can do, verbs, actions)........................ 

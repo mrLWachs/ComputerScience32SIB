@@ -20,8 +20,14 @@ package testing.unit2;
  * @author Mr. Wachs
  * @since 4-Apr-2022, 10:47:30 AM
  */
-public class Student 
+public class Student extends Person
 {
+    
+    private int number;
+    private double gpa;
+    
+    public Book book;
+    
     
     
     
