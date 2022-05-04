@@ -84,14 +84,15 @@ public class Student extends Person
      * Method just for this class, raises the average 
      */
     public void study() {
-        gpa *= 1.10;                            // Increase average by 10%
+        gpa += 0.10;                            // Increase average by 10%
     }
     
     /**
      * Method just for this class, lowers the student's average
      */
     public void slackOff() {
-        gpa = gpa - 0.05;                       // Decrease average by 5%
+        gpa = gpa - 0.05;           // Decrease average by 5%
+        secret();                   // Invoking a private (encapsulated) method
     }
     
     /**
@@ -101,6 +102,30 @@ public class Student extends Person
         for (int i = 0; i < 5; i++) {               // Study 5 times as hard
             study();
         }
+    }
+    
+    /**
+     * This talk method overrides the same talk method of the parent class and 
+     * outputs additional information to the screen - it also calls the same 
+     * over-ridden method (talk) from the super class using the "super" keyword.  
+     * With override methods, the light bulb appears for the comments as you  
+     * can (but is optional) add the "annotation" (which are like comments) 
+     * called the "@override" annotation which also adds a "circle" like target
+     * in NetBeans to the super class method
+     */
+    @Override
+    public void talk() {
+        super.talk();           // Invoking super class method
+        System.out.println("\t Student number = \t" + number);
+        System.out.println("\t Grade Point Average = \t" + gpa);
+    }
+    
+    /**
+     * "Private" or encapsulated methods are rare, but can only be called within
+     * the class. 
+     */
+    private void secret() {
+        System.out.println("Shhhhhhh!");
     }
     
 }

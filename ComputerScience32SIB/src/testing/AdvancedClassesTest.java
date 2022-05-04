@@ -66,10 +66,19 @@ public class AdvancedClassesTest
         student.birthday();
         student.talk();
         
+        // Instantiate another student object using our second constructor 
+        // option
         
-        
-        
-        
+        Student tom = new Student("Johnny Depp", 24, "he/him");
+        tom.talk();
+        tom.study();
+        tom.talk();          // This is a call to an over-ride method
+        tom.slackOff();
+        tom.talk();
+        tom.cram();
+        tom.talk();
+        tom.die();
+        tom.talk();
         
         
         
