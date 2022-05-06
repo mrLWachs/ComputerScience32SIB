@@ -4,6 +4,7 @@ package testing;
 
 import testing.unit2.Person;
 import testing.unit2.Student;
+import testing.unit2.Teacher;
 
  
 /**
@@ -79,6 +80,29 @@ public class AdvancedClassesTest
         tom.talk();
         tom.die();
         tom.talk();
+        
+        // Instatiate / construct / create / declare a teacher object / 
+        // instance / variable and associate it with some student objects
+        Teacher teacher = new Teacher("Curt Conners");
+        teacher.talk();
+        teacher.add(student);
+        teacher.add(tom);
+        teacher.teach();
+        
+        // Check the student object to see if the "teach()" method had an effect
+        student.talk();
+        tom.talk();
+        
+        // The "Object" class....
+        // Is built into Java (notice all classes start with a capital)
+        // The parent (or "super class") of ALL classes (includes classes 
+        // already created like "String" or "JOptionPane" and classes we
+        // create like "Person" or "Book") - means we will be inheriting 
+        // the properties and methods of the Object class
+        
+        
+        
+        
         
         
         
