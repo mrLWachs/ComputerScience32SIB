@@ -47,12 +47,40 @@ public class Teacher extends Person
         students = new Student[MAX];
     }
     
+    /**
+     * Adds a student to this teacher
+     * 
+     * @param student the student object to add
+     */
     public void add(Student student) {
+        // Add the passed student (parameter) into the array at the first 
+        // available "slot" (or spot, index, element, location) - this is
+        // done by using the square brackets "[ ]" and placing the index 
+        // number in the brackets. Remember, arrays start the indexing at 
+        // zero and the last index is always one less than the size 
+        students[count] = student;
+        count++;                    // Move to the next index (for next time)
         
+        // We need to watch for "out of bounds..." errors
+        if (count >= MAX) count = 0;
     }
     
+    /**
+     * Teaches ALL the students this teacher has an association with by making
+     * them all study (and makes all the students "smarter")
+     */
     public void teach() {
-        
+        // To access an entire array we will travel (or "traverse", or "visit
+        // every spot/index" in the array) through using a "for" loop, and
+        // the ".length" feature of arrays...        
+        for (int i = 0; i < students.length; i++) {
+            // Since this array is an array of "class" objects (not primitve
+            // data types like "int") we have to watch out for "empty" spots
+            // or "null" spots
+            if (students[i] != null) {
+                students[i].study();        // Make this spot (student) study
+            }            
+        }
     }
         
 }
