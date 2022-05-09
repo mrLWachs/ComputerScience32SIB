@@ -118,6 +118,8 @@ public class Person
      */
     @Override
     public String toString() {
+        // Even though we are over-riding this method, we can still call on the
+        // super class version of this method - like "super.toString();"
         return name + " is " + age + " identifies " + gender;
     }
        
