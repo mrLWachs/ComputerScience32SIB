@@ -100,6 +100,49 @@ public class AdvancedClassesTest
         // create like "Person" or "Book") - means we will be inheriting 
         // the properties and methods of the Object class
         
+        Object object1 = new Object();  // 1st instance of the Object class
+        Object object2 = new Object();  // 2nd instance of the Object class
+        Object object3 = object2;       // identifier name for same object
+        
+        // Built into the object class are a number of methods that all other
+        // classes inherit. These include some that are not relevant in this 
+        // unit, and others like the: toString() and equals() methods
+        
+        System.out.println("object1 as a string is " + object1.toString());
+        System.out.println("object2 as a string is " + object2.toString());
+        System.out.println("object3 as a string is " + object3.toString());
+        
+        // The toString() method of the object class outputs information
+        // including the memory address (in hexadecimal code) where this object
+        // is stored in this computer's memory
+        
+        // This method (toString) is inherited by ALL sub classes (children),
+        // for example...
+        
+        System.out.println("Person  object as string is " + person.toString());
+        System.out.println("Student object as string is " + student.toString());
+        System.out.println("Teacher object as string is " + teacher.toString());
+        
+        // See the object class's inherited method (toString) on a class we 
+        // don't write like the "String", "Integer", and "Double" class...
+        
+        String  stringObject  = new String("puppy");
+        Integer integerObject = new Integer(7);
+        Double  doubleObject  = new Double("3.14"); 
+        
+        // Primitive data types (like "int") also have a "class" version (or 
+        // a "big daddy" version) - also know as the "wrapper" class 
+        
+        System.out.println("String  object = " + stringObject.toString());
+        System.out.println("Integer object = " + integerObject.toString());
+        System.out.println("Double  object = " + doubleObject.toString());
+        
+        // In the case of the String, Integer, and Double - those classes 
+        // OVER-RIDE the toString method to create their own versions of those
+        // methods - we can over-rode the toString method i our own classes
+        
+        
+        
         
         
         

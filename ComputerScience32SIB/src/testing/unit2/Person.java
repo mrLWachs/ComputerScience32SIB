@@ -110,5 +110,15 @@ public class Person
     public void birthday() {
         age++;
     }
+    
+    /**
+     * String representation of this object
+     * 
+     * @return the object represented as a String
+     */
+    @Override
+    public String toString() {
+        return name + " is " + age + " identifies " + gender;
+    }
        
 }
