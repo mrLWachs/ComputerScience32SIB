@@ -139,11 +139,20 @@ public class AdvancedClassesTest
         
         // In the case of the String, Integer, and Double - those classes 
         // OVER-RIDE the toString method to create their own versions of those
-        // methods - we can over-rode the toString method i our own classes
+        // methods - we can over-rode the toString method in our own classes
         
         if (object1.equals(object2)) System.out.println("O1==O2");
         if (object1.equals(object3)) System.out.println("O1==O3");
         if (object2.equals(object3)) System.out.println("O2==O3");
+        
+        // The "equals" method of the Object class just compares if two
+        // objects are in the same memory address. But, like "toString" we 
+        // can over-ride the equals() method and we will do this in the 
+        // Person class...
+        
+        
+        
+        
         
         
         

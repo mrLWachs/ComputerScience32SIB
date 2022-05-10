@@ -122,5 +122,24 @@ public class Person
         // super class version of this method - like "super.toString();"
         return name + " is " + age + " identifies " + gender;
     }
+    
+    /**
+     * Comparison to determine if two objects are "equal" in this context
+     * 
+     * @param object the object to compare to
+     * @return the objects are "equal" (true) or not (false)
+     */
+    @Override
+    public boolean equals(Object object) {
+        // The parameter called "object" of this method is of type "Object" and
+        // not of type "Person" at first. This is so the method is "generic" 
+        // and properly over-rides the inherited method of the Object class.
+        // However, we will be "casting" this object into a "Person" object 
+        
+    }
+    
+    
+    
+    
        
 }
