@@ -112,6 +112,31 @@ public class Person
     }
     
     /**
+     * Accessor method (or "getter") that gives you (or "reads") the age of
+     * this person (which is a private/encapsulated property of this class 
+     * which cannot be read outside the class)
+     * 
+     * @return 
+     */
+    public int getAge() {
+        // Often programmers will write a accessor method and NOT a mutator
+        // method for a property - making the property "read-only"
+        return age;
+    }
+    
+    /**
+     * Mutator method (or "setter") that "changes" the encapsulated property
+     * of this person (which is private property/global variable of this class
+     * which cannot be change outside the class)
+     * 
+     * @param age the new age to set (mutate) the property into
+     */
+    public void setAge(int age) {
+        // A programmer "could" potentially write error checking code here...
+        this.age = age;
+    }
+        
+    /**
      * String representation of this object
      * 
      * @return the object represented as a String
@@ -151,6 +176,8 @@ public class Person
         // return true;
         // This would be a "shallow" comparison of two person objects
     }
+    
+    
     
     
     
