@@ -22,8 +22,7 @@ public class Person
     // variables" for this class - they can be simple variables, or even 
     // arrays (or even other classes)
     
-    public String name;    
-    public boolean alive;
+    public String name; 
     public String gender;
         
     /**
@@ -33,7 +32,13 @@ public class Person
      */
     private int age;
     
-    
+    /** 
+     * Using the modifier word "protected" for a property or method means that
+     * property (or the method can be called) can be accessed by the class 
+     * itself (like private) and can be accessed by other class IF those classes
+     * are "related" to this class through inheritance (subclasses)
+     */
+    protected boolean alive;
     
     
     // Methods: (things it can do, verbs, actions)........................ 
@@ -164,11 +169,13 @@ public class Person
         
         // We can do a "deeper" comparison of the two person objects
         
-        if (this.alive != that.alive)         return false; // Fail equal test
-        if (this.age   != that.age)           return false; // Fail another test
-        if (!this.gender.equals(that.gender)) return false;
+        if (this.alive != that.alive)         return false; // Fail equal test        
+        if (!this.gender.equals(that.gender)) return false; // Fail another test
         if (!this.name.equals(that.name))     return false;
                 
+        // We use our accessor ("getter") methods
+        if (this.getAge() == that.getAge())   return false; 
+        
         // Once we pass all tests in the code above...
         return true;
 
@@ -177,10 +184,39 @@ public class Person
         // This would be a "shallow" comparison of two person objects
     }
     
+    /**
+     * Deep clone, creates a duplicate (all properties?) object using new memory
+     * 
+     * @return a "clone" of the object using new memory
+     */
+    @Override
+    public Person clone() {
+        // Shallow clone would be clode like:
+        // return this;
+        
+        // Make a deep clone, we generate (declare) "new" memory
+        Person that = new Person();
+        
+        // Duplicate (copy over) all the properties to make it a "deep" clone
+        that.name   = this.name;
+        that.gender = this.gender;
+                
+        // We use our accessor ("getter") AND our mutator ("setter") methods
+        that.setAge(this.getAge());
+        
+        // Other properties that are "private" (encapsulated) or "protected"
+        that.alive = this.alive;
+        
+        return that;        
+    }
+     
+    /**
+     * The protected modifier can be applied to both properties (also know as
+     * "global variables") AND methods. Meaning the method can be called inside
+     * the class and by the classes related to this (through inheritance)
+     */
+    protected void secret() {
+        System.out.println("Shhh, you shouldn't know about me!");
+    }    
     
-    
-    
-    
-    
-       
 }

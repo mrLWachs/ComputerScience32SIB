@@ -124,8 +124,8 @@ public class Student extends Person
      * "Private" or encapsulated methods are rare, but can only be called within
      * the class. 
      */
-    private void secret() {
-        System.out.println("Shhhhhhh!");
+    private void passNote() {
+        System.out.println("Do you like me?!");
     }
     
 }
