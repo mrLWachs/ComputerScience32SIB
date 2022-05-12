@@ -33,6 +33,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 //        // We are "calling" the method (means "running" it or "executing" it)
 //        learnMethods();
 //        learnArrays();
+//        learnClasses();
 
         // FOR CS40S content ONLY...............................................
         Tester tester = new Tester();
@@ -1099,6 +1100,96 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
      */
     private static char random(char low, char high) {
         return (char)random((char)low,(int)high);     // cast to int and back  
+    }
+    
+    /**
+     * Goes over the content of this unit
+     */
+    private static void learnClasses() {
+        System.out.println("Start Learning classes...");
+        
+        // Create a "person" (add a class called "Person" to this Java project)
+        // To do this, click on File - New File (or icon on toolbar)
+        // A dialog will appear and you select "Java" and "Java Class"
+        // Then next...
+        // Then give it a name (starts with a capital letter and camel casing)
+        // Then click finish!
+        
+        // use a line of code like this:
+        // Random random = new Random();
+        
+        Person person = new Person();
+        // Class object = new Class() <--- implies a method?
+        // that is the call to the constructor method
+        
+        // call (invoke) a method within the object
+        person.talk();
+        
+        // Use (call,invoke) other methods and change properties
+        person.birthday(1);
+        person.talk();
+        person.name = "Dave Smith";
+        person.talk();
+        person.gender = "Male";
+        person.talk();
+        person.die();
+        person.talk();
+        
+        // Create (instantiate) another object with a different (overloaded) 
+        // constructor        
+        Person other = new Person("Another name");
+        other.talk();
+        other.birthday(10);
+        other.talk();
+        
+        // Another instance using the 3rd constructor option
+        Person third = new Person("Jennifer Gooku",17,"female");
+        third.birthday(38);
+        third.talk();
+        third.die();
+        third.talk();
+        // third.age = 50; // cannot be done, private property
+        
+        // Create a Student object and call it's methods (including the 
+        // ones it inherited from the Person class)        
+        Student student = new Student("Student Person",17,"student",123456);
+        student.talk();
+        // Call (invoke) methods specifically for the student class
+        student.slackOff();
+        student.study();
+        student.slackOff();
+        student.cram();
+        student.talk();
+        
+        // Instantiate a Husky object
+        Husky husky = new Husky("Havoc", 14, "male", 2665);
+        husky.talk();
+        
+        // Make a Teacher instance
+        Teacher teacher = new Teacher("Mr. Wachs");
+        teacher.talk();
+        
+        // Assigned student objects to the public array
+        teacher.students[0] = student;
+        teacher.students[1] = husky;
+        
+        // Called talk again to see the students we added
+        teacher.talk();
+        
+        // Build (declare, initiaize, instantiate) a Meeting object
+        Meeting meeting = new Meeting();
+        
+        // Calling our polymorphic method
+        meeting.attend(person);
+        meeting.attend(other);
+        meeting.attend(third);
+        meeting.attend(student);
+        meeting.attend(husky);
+        meeting.attend(teacher);
+        
+        meeting.hold();
+                
+        System.out.println("Completed learning classes!");
     }
     
 }

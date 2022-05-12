@@ -3,7 +3,7 @@ package testing.unit2;
 
  
 /**
- * Executioner.java - description
+ * Executioner.java - represents a executioner person
  *
  * @author Mr. Wachs
  * @since 12-May-2022, 10:11:49 AM

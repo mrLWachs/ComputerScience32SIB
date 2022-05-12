@@ -2,7 +2,13 @@
 /** Required package class namespace */
 package testing;
 
+import testing.unit2.Athlete;
+import testing.unit2.Doctor;
+import testing.unit2.Executioner;
+import testing.unit2.Husky;
+import testing.unit2.MrWachs;
 import testing.unit2.Person;
+import testing.unit2.Piper;
 import testing.unit2.Student;
 import testing.unit2.Teacher;
 
@@ -150,12 +156,53 @@ public class AdvancedClassesTest
         // can over-ride the equals() method and we will do this in the 
         // Person class...
         
+        // Now we will create 3 identifier names, but only one memory location
+        // for all three         
+        Person person1 = new Person();  // Creating a "new" memory address
+        Person person2 = person1;       // Same memory address as person1
+        Person person3 = person2;       // Same memory address as person1 and 2
         
+        System.out.println("P1 = " + person1.toString());
+        System.out.println("P2 = " + person2.toString());
+        System.out.println("P3 = " + person3.toString());
         
+        if (person1.equals(person2)) System.out.println("P1==P2");
+        if (person2.equals(person3)) System.out.println("P2==P3");
+        if (person1.equals(person3)) System.out.println("P1==P3");
         
+        // Then we will over-ride the toString() and equals() methods in the
+        // person class so that we can check how that method is called over the 
+        // object version of those methods. It is useful to alter a NetBeans
+        // template so those methods are always over-ridden in every new class 
+        // created (see the comment in "ComputerScience40S.java" to do this). 
         
+        // Testing the clone() method:
+        Person personclone = twitter.clone();
         
+        System.out.println("Original is " + twitter.toString());
+        System.out.println("Clone    is " + personclone.toString());
         
+        if (personclone.equals(twitter)) System.out.println("Clone is ==");
+        
+        // Create instances of our other classes:        
+        Doctor      doctor      = new Doctor();
+        Executioner executioner = new Executioner();
+        MrWachs     mrWachs     = new MrWachs();
+        Husky       husky       = new Husky();
+        Piper       piper       = new Piper();
+        Athlete     athlete     = new Athlete();
+        
+        // And output those objects:
+        // NOTE: when you send an object to the method System.out.println() as 
+        // an argument, it expects a string, with objects it will automatically
+        // call your toString() method 
+        
+        System.out.println(doctor);
+        System.out.println(executioner);
+        System.out.println(mrWachs);
+        System.out.println(husky);
+        System.out.println(piper);
+        System.out.println(athlete);
         
         
         

@@ -174,7 +174,7 @@ public class Person
         if (!this.name.equals(that.name))     return false;
                 
         // We use our accessor ("getter") methods
-        if (this.getAge() == that.getAge())   return false; 
+        if (this.getAge() != that.getAge())   return false; 
         
         // Once we pass all tests in the code above...
         return true;

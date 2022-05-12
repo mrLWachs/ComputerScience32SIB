@@ -3,7 +3,7 @@ package testing.unit2;
 
  
 /**
- * Piper.java - description
+ * Piper.java - represents a piper high school student person
  *
  * @author Mr. Wachs
  * @since 12-May-2022, 10:11:35 AM

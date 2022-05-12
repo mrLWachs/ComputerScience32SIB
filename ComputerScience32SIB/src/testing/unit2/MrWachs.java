@@ -3,7 +3,7 @@ package testing.unit2;
 
  
 /**
- * MrWachs.java - description
+ * MrWachs.java - represents a Mr. Wachs teacher person
  *
  * @author Mr. Wachs
  * @since 12-May-2022, 10:12:01 AM
