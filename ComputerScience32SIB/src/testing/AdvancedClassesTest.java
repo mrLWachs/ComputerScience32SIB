@@ -6,6 +6,7 @@ import testing.unit2.Athlete;
 import testing.unit2.Doctor;
 import testing.unit2.Executioner;
 import testing.unit2.Husky;
+import testing.unit2.Meeting;
 import testing.unit2.MrWachs;
 import testing.unit2.Person;
 import testing.unit2.Piper;
@@ -177,12 +178,12 @@ public class AdvancedClassesTest
         // created (see the comment in "ComputerScience40S.java" to do this). 
         
         // Testing the clone() method:
-        Person personclone = twitter.clone();
+        Person personClone = twitter.clone();
         
         System.out.println("Original is " + twitter.toString());
-        System.out.println("Clone    is " + personclone.toString());
+        System.out.println("Clone    is " + personClone.toString());
         
-        if (personclone.equals(twitter)) System.out.println("Clone is ==");
+        if (personClone.equals(twitter)) System.out.println("Clone is ==");
         
         // Create instances of our other classes:        
         Doctor      doctor      = new Doctor();
@@ -203,6 +204,35 @@ public class AdvancedClassesTest
         System.out.println(husky);
         System.out.println(piper);
         System.out.println(athlete);
+        
+        // Instantiate ("make an instance of") a meeting object (of that class)
+        Meeting meeting = new Meeting();
+        
+        // With NetBeans, you can use CTRL+SPACEBAR autocomplete with the 
+        // arguments of methods to see what arguements qualify
+        meeting.attend(person);
+        meeting.attend(person1);
+        meeting.attend(person2);
+        meeting.attend(person3);        
+        meeting.attend(twitter);
+        meeting.attend(student);
+        meeting.attend(tom);
+        meeting.attend(teacher);
+        meeting.attend(personClone);
+        meeting.attend(doctor);
+        meeting.attend(executioner);
+        meeting.attend(mrWachs);
+        meeting.attend(piper);
+        meeting.attend(husky);
+        meeting.attend(athlete);
+        // Have person objects (instances of the Person class) and all 
+        // children objects (classes that inherit from Person) will attend
+        // the meeting - through the concept of polymorphism 
+        
+        
+        
+        
+        
         
         
         

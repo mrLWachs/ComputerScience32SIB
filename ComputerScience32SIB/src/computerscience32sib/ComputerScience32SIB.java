@@ -33,7 +33,7 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
 //        // We are "calling" the method (means "running" it or "executing" it)
 //        learnMethods();
 //        learnArrays();
-//        learnClasses();
+        learnClasses();
 
         // FOR CS40S content ONLY...............................................
         Tester tester = new Tester();
