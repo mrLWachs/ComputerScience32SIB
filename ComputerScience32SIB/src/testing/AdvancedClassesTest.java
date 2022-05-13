@@ -229,7 +229,8 @@ public class AdvancedClassesTest
         // children objects (classes that inherit from Person) will attend
         // the meeting - through the concept of polymorphism 
         
-        
+        // Now we hold the meeting...
+        meeting.hold();
         
         
         

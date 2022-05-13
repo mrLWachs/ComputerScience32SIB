@@ -41,6 +41,13 @@ public class Student extends Person
     private int number;
     private double gpa;
     
+    /**
+     * "static" property: the modifier word "static" simply means "shared" 
+     * meaning that ALL objects of this class share this ONE instance of this
+     * variable
+     */
+    public static int total;
+    
     
     /**
      * If a constructor has NO parameters it is called the "default" 
