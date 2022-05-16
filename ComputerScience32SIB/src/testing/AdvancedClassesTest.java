@@ -264,7 +264,9 @@ public class AdvancedClassesTest
         // JOptionPane jop = new JOptionPane();
         // jop.showMessageDialog(null,"");
         
-        
+        // When we call static methods from the instances, the 
+        // autocomplete/intellisense will not show it - but it does show it in
+        // autocomplete/intellisense from the Class name
         
         
         

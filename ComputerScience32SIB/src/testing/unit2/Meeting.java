@@ -76,10 +76,43 @@ public class Meeting
         
         message += " students in the room!";
         
+        // For comparison, a regular "for" loop would be code like this:
+        // for (int i = 0; i < members.length; i++) {
+        //     Person member = members[i];
+        //     member.talk();
+        // }
         
-        
-        
-        
+        // Now we loop through the entire array ("traverse" means to travel to 
+        // or visit every spot) from start (index zero) to the finish (index of 
+        // the length minus one) - using a NEW type of loop (a new "for" loop)
+        // called the "enhanced for loop". To create the enhanced for loop 
+        // use the shortcut: type "for" then CTRL + SPACE and pick the fourth 
+        // option that appears from the top, or type "fore" and TAB 
+        for (Person member : members) {
+            // The enhanced for loop should be read as...
+            // "for every member in members"
+            
+            // Only going to count people (Person objects) that "exist"
+            // (that are not a "null")
+            if (member != null) {
+                message += "\nAttended by a ";
+                
+                // The "instanceof" operator takes an object (instance) on the
+                // left hand side (LHS) and the class type on the right hand
+                // side (RHS) and it is true if the object 'comes from' that
+                // class (is a instance of that class type)
+                if (member instanceof Person)      message += "Person ";
+                if (member instanceof Student)     message += "Student ";
+                if (member instanceof Teacher)     message += "Teacher ";
+                if (member instanceof Doctor)      message += "Doctor ";
+                if (member instanceof Executioner) message += "Executioner ";
+                if (member instanceof Husky)       message += "Husky ";
+                if (member instanceof Piper)       message += "Piper ";
+                if (member instanceof Athlete)     message += "Athlete ";
+            }            
+        }
+        // finally output the message
+        message += "\nMeeting adjured!";
         System.out.println(message);
     }
     
