@@ -64,6 +64,8 @@ public class Student extends Person
         number = 0;
         gpa    = 0.0;
         book   = null;
+        // Mutate (change) the static (shared) property (global variable)
+        total++;
     }
     
     /**
@@ -85,6 +87,8 @@ public class Student extends Person
         number = 1;
         gpa    = 0.0;
         book   = null;
+        // Mutate (change) the static (shared) property (global variable)
+        total++;
     }
     
     /**

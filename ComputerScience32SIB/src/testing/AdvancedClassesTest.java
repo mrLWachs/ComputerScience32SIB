@@ -2,6 +2,7 @@
 /** Required package class namespace */
 package testing;
 
+import javax.swing.JOptionPane;
 import testing.unit2.Athlete;
 import testing.unit2.Doctor;
 import testing.unit2.Executioner;
@@ -232,11 +233,36 @@ public class AdvancedClassesTest
         // Now we hold the meeting...
         meeting.hold();
         
+        // Now we will call a static (shared) method from the objects 
+        // (instances) of the Person class and the other classes that extend
+        // ("is a") from Person and inherited this method
         
+        person.endTheWorld();
+        student.endTheWorld();
+        teacher.endTheWorld();
+        husky.endTheWorld();
+        piper.endTheWorld();
+        executioner.endTheWorld();
+        doctor.endTheWorld();
+        athlete.endTheWorld();
         
+        // You can invoke (call) static methods from the name of the class 
+        // itself, not just the instances (objects) of the class, for example
         
+        Person.endTheWorld();
+        Student.endTheWorld();
+        Teacher.endTheWorld();
+        Husky.endTheWorld();
+        Piper.endTheWorld();
+        Doctor.endTheWorld();
+        Executioner.endTheWorld();
+        Athlete.endTheWorld();
         
-        
+        // You have seen calling method like this before, for example in
+        // JOptionPane.showMessageDialog(null, "");
+        // Not doing this...
+        // JOptionPane jop = new JOptionPane();
+        // jop.showMessageDialog(null,"");
         
         
         

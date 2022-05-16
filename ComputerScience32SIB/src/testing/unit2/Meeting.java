@@ -65,8 +65,19 @@ public class Meeting
      * Hold the meeting for all members 
      */
     public void hold() {
-        
+        // Make a variable to hold a bunch of potential output data
         String message = "Meeting is about to begin...\n\n";
+        message += "Watch your language, there are ";
+        
+        // A static variable, since it is "shared" amoungst all 
+        // instances of the Student class (all student objects) it can
+        // also be accessed form the class itself...
+        message += Student.total;
+        
+        message += " students in the room!";
+        
+        
+        
         
         
         System.out.println(message);
