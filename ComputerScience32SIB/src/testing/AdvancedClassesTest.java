@@ -3,6 +3,7 @@
 package testing;
 
 import javax.swing.JOptionPane;
+import testing.unit2.Apple;
 import testing.unit2.Athlete;
 import testing.unit2.Doctor;
 import testing.unit2.Executioner;
@@ -11,6 +12,7 @@ import testing.unit2.Meeting;
 import testing.unit2.MrWachs;
 import testing.unit2.Person;
 import testing.unit2.Piper;
+import testing.unit2.Steak;
 import testing.unit2.Student;
 import testing.unit2.Teacher;
 
@@ -267,6 +269,15 @@ public class AdvancedClassesTest
         // When we call static methods from the instances, the 
         // autocomplete/intellisense will not show it - but it does show it in
         // autocomplete/intellisense from the Class name
+        
+        // Instantiate an object from a child class of an abstract class
+        // using the abstract methods (that were made 'concrete') in that class
+        Apple apple = new Apple();
+        Steak steak = new Steak();
+        
+        apple.smell(5);
+        steak.smell(5);
+        
         
         
         
