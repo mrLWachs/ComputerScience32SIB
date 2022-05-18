@@ -14,11 +14,12 @@ public interface Football
 {
     
     /**
-     * A team scoring a point
+     * A team scoring some points
      * 
      * @param name the name of the team who scored
+     * @param points the number of points scored
      */
-    void score(String name);
+    void score(String name, int points);
     
     /**
      * The passed quarter of football is over

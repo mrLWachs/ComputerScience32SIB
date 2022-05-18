@@ -2,7 +2,7 @@
 /** Required package class namespace */
 package testing;
 
-import javax.swing.JOptionPane;
+
 import testing.unit2.Apple;
 import testing.unit2.Athlete;
 import testing.unit2.Doctor;
@@ -285,11 +285,40 @@ public class AdvancedClassesTest
         husky.consume(apple);
         mrWachs.consume(steak);
         
-        
-        
-        
-        
-        
+        // An Interface can be thought of "as a set of rules" - like a class
+        // but only contains method signatures (like abstract methods - but
+        // you don't have to use the word 'abstract' inside interfaces).
+        // Interfaces cannot be instantiated (made into objects like
+        // Sports sports = new Sports(); like abstract classes). Like an
+        // abstract class, interfaces are used by 'child' like classes that
+        // 'implement' the interface (these classes "follow the rules" of
+        // the interface ("the set of rules"). 
+        Athlete jock = new Athlete("Jake Paul",23);        
+        // Set our opponent 
+        jock.setOpponent("Logan Paul");        
+        // Have our athlete compete in four rounds of athletics
+        for (int round = 0; round < 4; round++) {            
+            System.out.println("Round " + round + "...");            
+            // Check to see if they can play
+            if (jock.haveYouGotItSigned()) {
+                // They can play...                
+                // Play some hockey
+                jock.score("Jake Paul");
+                jock.score("Logan Paul");
+                jock.score("Jake Paul");                
+                // Play some football
+                jock.score("Jake Paul",3);
+                jock.score("Logan Paul",7);
+                jock.score("Jake Paul",1);                
+                // See the results...
+                jock.endOfPeriod(round);
+                jock.endOfQuarter(round);                
+            }
+            else {
+                // Sign so they can play
+                jock.sign();
+            }            
+        }
         
         
         
