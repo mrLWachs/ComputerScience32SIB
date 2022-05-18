@@ -3,7 +3,12 @@ package testing.unit2;
 
  
 /**
- * Apple.java - description
+ * Apple.java - represents an apple. This class inherits from the abstract 
+ * class all its properties and methods. However, the abstract methods are 
+ * FORCED to be over-ridden in this class (now we move from the 'abstract' to
+ * the 'concrete') and the methods MUST now be given a method body (now you
+ * define HOW for this particular food object). Regular methods can still be
+ * over-ridden as well.
  *
  * @author Mr. Wachs
  * @since 17-May-2022, 10:46:00 AM

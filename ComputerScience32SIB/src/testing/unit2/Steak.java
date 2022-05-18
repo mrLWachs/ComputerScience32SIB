@@ -3,7 +3,7 @@ package testing.unit2;
 
  
 /**
- * Steak.java - description
+ * Steak.java - represents a steak
  *
  * @author Mr. Wachs
  * @since 17-May-2022, 10:46:05 AM
