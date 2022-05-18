@@ -278,6 +278,21 @@ public class AdvancedClassesTest
         apple.smell(5);
         steak.smell(5);
         
+        // Call the polymorphic method which accepts the abstract object (Food)
+        // as an argument. since the abstract class cannot be instantiated,
+        // only children objects from the abstract class can be arguments
+        // (in other words, apple and steak instances)
+        husky.consume(apple);
+        mrWachs.consume(steak);
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
