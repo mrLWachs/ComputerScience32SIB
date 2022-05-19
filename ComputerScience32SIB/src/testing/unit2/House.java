@@ -41,9 +41,10 @@ public class House <T extends Person,U>
      * objects or children of the Food class
      */
     public <V extends Food> void party(V[] items) {
+        System.out.println("\n\nParty time!!!\n\n");
         System.out.println("Home owner: ");
         System.out.println(homeOwner.name);
-        System.out.println("and the content of the hose are...");
+        System.out.println("and the content of the house are...");
         System.out.println(contents.toString());
         // Loop through the array (enhanced) 
         for (V item : items) {
