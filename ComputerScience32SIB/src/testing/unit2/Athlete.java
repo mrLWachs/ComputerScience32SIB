@@ -186,7 +186,7 @@ public class Athlete extends Husky implements Hockey, Football, PermissionForm
      */
     @Override
     public void score(String name, int points) {
-        if (points == 6) System.out.println(name + " has scored a touchdown");
+        if (points == 7) System.out.println(name + " has scored a touchdown");
         if (points == 3) System.out.println(name + " has scored a field goal");
         if (points == 1) System.out.println(name + " has scored a safety");
         if (name.equals(opponentName)) opponentScore += points;
