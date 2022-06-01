@@ -28,21 +28,65 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // FOR CS30S content ONLY...............................................
-        learnIntroToJava();     
-        // We are "calling" the method (means "running" it or "executing" it)
-        learnMethods();
-        learnArrays();
-        learnClasses();
+        do {
+            // Added a small choice option to allow the user to run different 
+            // units for this example....
+            final String[] OPTIONS = {
+                "CS30S Unit 1: Learn Introduction To Java",
+                "CS30S Unit 2: Learn Methods",
+                "CS30S Unit 3: Learn Arrrays",
+                "CS30S Unit 4: Learn Classes",
+                "CS30S Unit 5: Learn Graphics (optional unit)",
+                "CS40S: Learn all units",
+            };
+            Object choice = JOptionPane.showInputDialog(
+                    null, 
+                    "Select which unit to run the example for (or click cancel)", 
+                    "Computer Science 32SIB Examples",
+                    JOptionPane.PLAIN_MESSAGE,
+                    null, 
+                    OPTIONS, 
+                    OPTIONS[4]
+            );            
+            if (choice == null) {
+                System.exit(0);
+            }
+            // FOR CS30S content ONLY...........................................
+            else if (choice.toString().equals(OPTIONS[0])) {
+                learnIntroToJava();
+                // The line above is a "call" to the method named 
+                // "learnIntroToJava" meaning the code stops at that line and 
+                // "jumps" (or branches) to themethod written below. Then runs 
+                // all the code inside that method (the code in the 'block' of 
+                // the method between two { } ) then comes back to the next line 
+                // after the "call" (execute, run, etc.)
 
-        // FOR CS40S content ONLY...............................................
-        Tester tester = new Tester();
-        // This line creates a tester object (instantiates an instance of a 
-        // tester class object) and it calls the constructor method - you can
-        // comment out the rest of the code in the main method
-        
-        // For CS30S AND CS40S Students:        
-        LearnGraphics learnGraphics = new LearnGraphics();
+                // In NetBeans, you can write the call to a method before you 
+                // write the method - then NetBeans will suggest (with a 
+                // 'lightbulb') that it writes the method for you
+            }
+            else if (choice.toString().equals(OPTIONS[1])) {
+                learnMethods();
+            }
+            else if (choice.toString().equals(OPTIONS[2])) {
+                learnArrays();
+            }
+            else if (choice.toString().equals(OPTIONS[3])) {
+                learnClasses();
+            }
+            else if (choice.toString().equals(OPTIONS[4])) {
+                // For CS30S AND CS40S Students: 
+                LearnGraphics learnGraphics = new LearnGraphics();
+            }
+            // FOR CS40S content ONLY...........................................
+            else if (choice.toString().equals(OPTIONS[5])) {
+                Tester tester = new Tester();
+                // This line creates a tester object (instantiates an instance  
+                // of a tester class object) and it calls the constructor 
+                // method - you can comment out the rest of the code in the 
+                // main method
+            }
+        } while(true);
     }
 
     /**
