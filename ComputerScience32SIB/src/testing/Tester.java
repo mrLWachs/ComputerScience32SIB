@@ -25,11 +25,10 @@ public class Tester
      * "void") - constructor methods are "public"
      */
     public Tester() {
-        System.out.println("Computer Science 40S content starting...");
-        
-//        RecursionTest       unit1 = new RecursionTest();   
+        System.out.println("Computer Science 40S content starting...");        
+        RecursionTest       unit1 = new RecursionTest();   
         AdvancedClassesTest unit2 = new AdvancedClassesTest();
-        
+        CollectionsTest     unit3 = new CollectionsTest();        
         System.out.println("Computer Science 40S content complete!");
     }    
     

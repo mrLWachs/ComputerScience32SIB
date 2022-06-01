@@ -28,15 +28,15 @@ public class ComputerScience32SIB {        // Curly brackets DO NOT remove
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        // FOR CS30S content ONLY...............................................
-//        learnIntroToJava();     
-//        // We are "calling" the method (means "running" it or "executing" it)
-//        learnMethods();
-//        learnArrays();
-//        learnClasses();
+        // FOR CS30S content ONLY...............................................
+        learnIntroToJava();     
+        // We are "calling" the method (means "running" it or "executing" it)
+        learnMethods();
+        learnArrays();
+        learnClasses();
 
         // FOR CS40S content ONLY...............................................
-//        Tester tester = new Tester();
+        Tester tester = new Tester();
         // This line creates a tester object (instantiates an instance of a 
         // tester class object) and it calls the constructor method - you can
         // comment out the rest of the code in the main method
