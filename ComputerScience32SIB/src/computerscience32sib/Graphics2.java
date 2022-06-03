@@ -86,7 +86,7 @@ public class Graphics2 extends JFrame
         button.setText("EXIT");
         // With image, little more code, why not "take" (copy/paste) the
         // code from the designer and adapt it as you like
-        final String FILE = "/computerscience30s/giphy.gif";
+        final String FILE = "/computerscience32sib/giphy.gif";
         picture.setIcon(new ImageIcon(getClass().getResource(FILE))); 
         
         // Set the container's layout manager to position all the controls
