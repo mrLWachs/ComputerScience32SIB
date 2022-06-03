@@ -8,7 +8,7 @@ package computerscience32sib;
  * other objects
  *
  * @author Mr. Wachs
- * @since 30-May-2022, 10:41:40 AM
+ * @since 1-Jun-2022, 3:16:14 PM
  */
 public class LearnGraphics 
 {
@@ -18,11 +18,10 @@ public class LearnGraphics
      */
     public LearnGraphics() {
         System.out.println("Start learning graphics...");
-        // Create class objects for different examples
+        // Create class objects for different examples        
         Graphics1 graphics1 = new Graphics1();
         Graphics2 graphics2 = new Graphics2();
-        
         System.out.println("Learning graphics complete!");
     }
-     
+  
 }
